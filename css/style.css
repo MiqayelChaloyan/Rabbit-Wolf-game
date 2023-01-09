@@ -1,0 +1,269 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+}
+
+#root #controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% auto;
+}
+
+#root #controls #select {
+  height: 40px;
+  font-size: 23px;
+}
+
+#root #controls #start {
+  border: none;
+  width: 90px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0px 20px;
+  background: cadetblue;
+  color: aliceblue;
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0) 0px 3px 11px -5px;
+  font-family: cursive;
+}
+
+#root #contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root #contain .area {
+  background-color: rgb(170, 186, 229);
+  margin: 2px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+#root #contain .area img {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  margin: 0px auto;
+}
+
+#root #contain .carrot {
+  width: 60px;
+  height: 60px;
+  margin: 8px auto;
+  display: flex;
+}
+
+#root #btn-controls {
+  margin: 0px auto;
+  width: 100%;
+}
+
+#root #btn-controls div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+
+#root #btn-controls div #up,
+#root #btn-controls div #down,
+#root #btn-controls div #left,
+#root #btn-controls div #right {
+  border: none;
+  width: 5%;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0px 20px;
+  background: cadetblue;
+  color: aliceblue;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.29) 0px 2px 14px 5px;
+  font-family: cursive;
+}
+
+#root div .modal {
+  display: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  width: 500px;
+  top: 7%;
+  margin: 0px auto;
+  background: none;
+  transition: all 2ms ease 4s;
+}
+
+#root div .modal [open] {
+  display: flex;
+}
+
+#root div .modal .modal_icon {
+  width: 290px;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  left: 21%;
+  z-index: 0;
+  border-radius: 64px;
+}
+
+#root div .modal #modal_star {
+  width: 19px;
+  position: relative;
+  z-index: 2;
+  left: -25%;
+  top: -12px;
+}
+
+#root div .modal .model-inner {
+  height: 300px;
+  padding: 2em;
+  margin: 17% auto;
+  background-color: blanchedalmond;
+  opacity: 2;
+  transition: all 500ms ease 0s;
+  border-radius: 23px;
+}
+
+#root div .modal .model-inner .modal-header {
+  border: none;
+}
+
+#root div .modal .model-inner .modal-header .status {
+  font-family: sans-serif;
+  font-size: 39px;
+  text-align: center;
+  padding-top: 25px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+#root div .modal .model-inner .modal-header .status-txt {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 7px;
+  font-family: sans-serif;
+  color: #795548;
+}
+
+#root div .modal .model-inner #modal-close {
+  font-family: sans-serif;
+  background: #ff9800;
+  color: rgb(255, 255, 255);
+  line-height: 15px;
+  text-shadow: 2px 1px 4px black;
+  position: absolute;
+  text-align: center;
+  width: 155px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 7px;
+  padding-top: 5px;
+  cursor: pointer;
+  padding-left: 0.7rem;
+  padding-right: 1rem;
+  text-transform: capitalize;
+  border: 3px solid white;
+  left: 35%;
+  top: 69%;
+  font-size: 17px;
+  margin: 0 auto;
+}
+
+.printDuration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  margin: 16px auto;
+}
+
+.runningDuration {
+  color: red;
+}
+
+.status-score {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 5px;
+  font-family: cursive;
+  color: #795548;
+  background-color: #ff980030;
+  width: 180px;
+  margin: 0 auto;
+  border-radius: 15px;
+  font-weight: bold;
+  text-shadow: 3px 1px 4px black;
+}
+
+.score {
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 25px;
+  color: #795548;
+}
+
+.score:before,
+.score:after {
+  background-color: #795548;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 13%;
+}
+
+.score:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.score:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.printDuration img {
+  width: 28px;
+  height: 40px;
+  margin-left: 2%;
+}
+
+/* Loading */
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  top: 250px;
+  left: 48%;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: cadetblue;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}

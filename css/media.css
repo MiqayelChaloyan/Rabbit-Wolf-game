@@ -1,0 +1,76 @@
+@media only screen and (max-width: 1170px) and (min-width: 500px) {
+
+    #up,
+    #down,
+    #left,
+    #right {
+        width: 9%;
+        height: 36px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #up,
+    #down,
+    #left,
+    #right {
+        width: 15%;
+        height: 36px;
+    }
+
+    .area {
+        background-color: #aabae5;
+        width: 50px;
+        height: 50px;
+    }
+
+    .area>img {
+        width: 50px;
+        height: 50px;
+        margin: 0px auto;
+    }
+
+    .carrot {
+        animation: img 1s linear infinite;
+    }
+
+
+    @keyframes img {
+        0% {
+            width: 40px;
+            height: 40px;
+            margin: 5px auto;
+            display: flex;
+        }
+
+        25% {
+            width: 35px;
+            height: 35px;
+            margin: 5px auto;
+            display: flex;
+        }
+
+        50% {
+            width: 39px;
+            height: 39px;
+            margin: 5px auto;
+            display: flex;
+        }
+
+        75% {
+            width: 42px;
+            height: 42px;
+            margin: 5px auto;
+            display: flex;
+        }
+
+        100% {
+            width: 45px;
+            height: 45px;
+            margin: 5px auto;
+            display: flex;
+        }
+    }
+}
+
